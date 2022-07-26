@@ -1,0 +1,382 @@
+
+body {
+  margin: 2em;
+  font-family: "Open Sans", sans-serif;
+  background-image: url("/img/bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1em;
+  border-bottom: 2px solid var(--clr-gray-light);
+}
+
+/*
+div {
+  width: 100%;
+  border-radius: 5px;
+  background-color: #413e3d;
+  border: 2px solid rgb(72, 87, 72);
+  border-radius: 4px;
+  padding: 20px;
+}
+*/
+
+
+
+.title{
+  color: #F0FFFF;
+  font-size: 80px;
+  font-family: "Open Sans";
+  display: flex;
+  justify-content: center;
+}
+
+.name {
+  font-size: 100px;
+}
+
+.role {
+  color: white;
+  font-size: 24px;
+  font-family: "Open Sans";
+  display: flex;
+  justify-content: center;
+}
+
+/* Rounded border */
+hr.rounded {
+  border-top: 5px solid rgb(255, 217, 0);
+  border-radius: 5px;
+  margin-left: 25em;
+  margin-right: 25em;
+  padding: 5px;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+
+
+/* code by webdevtrick ( https://webdevtrick.com ) */
+:root{
+  --background-dark: #2d3548;
+  --text-light: rgba(255,255,255,0.6);
+  --text-lighter: rgba(255,255,255,0.9);
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+  --width-container: 1500px;
+  --primary: #FFCE00;
+  --secondary: #000000;
+  --dark: #212121;
+  --light: #212121;
+}
+ 
+*{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+html{
+  height: 100%;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 16px;
+}
+ 
+body{
+  height: 100%;
+}
+ 
+.hero-section{
+  align-items: flex-start;
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+  padding: var(--spacing-xxl) var(--spacing-l);
+}
+ 
+.cgrid{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 100%;
+}
+ 
+@media(min-width: 540px){
+  .cgrid{
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+ 
+@media(min-width: 960px){
+  .cgrid{
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
+ 
+.card{
+  list-style: none;
+  position: relative;
+}
+ 
+.card:before{
+  content: '';
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+ 
+.cardbg{
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--spacing-l);
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  transform: scale(1) translateZ(0);
+  transition: 
+    filter 200ms linear,
+    transform 200ms linear;
+}
+ 
+.card:hover .cardbg{
+  transform: scale(1.10) translateZ(0);
+}
+ 
+.ccontent{
+  left: 0;
+  padding: var(--spacing-l);
+  position: absolute;
+  top: 0;
+}
+ 
+ 
+.textcard{
+  color: var(--text-lighter);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
+}
+
+
+
+/* CARD FLIP ATTEMPT*/
+.card1 {
+  list-style:none;
+  position: relative
+}
+
+.card__inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.card__inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+
+.card__face--front {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.card__face--front h2 {
+  color: #FFF;
+  font-size: 32px;
+}
+
+.card__face--back {
+  background-color: var(--light);
+  transform: rotateY(180deg);
+}
+
+.card__content {
+  width: 100%;
+  height: 100%;
+}
+
+.card__header {
+  position: relative;
+  padding: 15px 15px 40px;
+}
+
+.card__header:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to bottom left, var(--primary) 10%, var(--secondary) 115%);
+  z-index: -1;
+  border-radius: 0px 0px 30% 0px;
+}
+
+.pp {
+  display: block;
+  width: 128px;
+  height: 128px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  background-color: #FFF;
+  border: 4px solid gold;
+  object-fit: cover;
+}
+
+.card__header h2 {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.card__body {
+  padding: 5px;
+}
+
+.social {
+  padding:20px;
+  font-size: 25px;
+}
+
+.brick {
+  padding:1eml;
+  background: rgb(75, 75, 75);
+  color: darkblue;
+  margin: 10px;
+  border-radius: 15px;
+  border: 3px solid gold;
+}
+
+iframe {
+  width:100%;
+  height:175px;
+  border: 3px solid gold;
+  border-radius: 15px;
+}
+
+.card__body h3 {
+  color: var(--dark);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.card__body p {
+  color: var(--dark);
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+/*HREF colors*/
+a:link {
+  color: gold;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: gold;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+/*Custom scrollbar*/
+::-webkit-scrollbar{
+  width:0;
+}
