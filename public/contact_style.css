@@ -6,16 +6,18 @@
     font-family: 'Poppins', sans-serif;
 }
 
+:root {
+    --overlay-color: #03a9f4;
+}
+
 body {
-    background-image: url('../img/DJI_0097.JPG');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: white;
 }
 
 .contactUs {
     position: relative;
     width: 100%;
-    padding: 40px 100px;
+    padding: 0px 100px;
 }
 
 .contactUs .title {
@@ -23,8 +25,8 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 2em;
-    background: black;
-    opacity: 0.5;
+    background: grey;
+    opacity: 0.9;
 }
 
 .contactUs .title h2 {
@@ -59,7 +61,7 @@ body {
 }
 
 .contact h3 {
-    color: black;
+    color: rgb(143, 51, 60);
     font-weight: 500;
     font-size: 1.4em;
     margin-bottom: 10px;
@@ -86,7 +88,7 @@ body {
 
 }
 .inputBox span {
-    color: lightblue;
+    color: black;
     margin-top: 10px;
     margin-bottom: 5px;
     font-weight: 500;
@@ -107,7 +109,7 @@ body {
     margin-bottom: 10px;
 }
 .inputBox input[type='submit'] {
-    background: lightblue;
+    background: rgb(143, 51, 60);
     color: white;
     border: none;
     font-size: 1.1em;
@@ -123,7 +125,8 @@ body {
 
 /* Info */
 .info {
-    background: lightslategrey;
+    background: grey;
+    opacity: 0.9;
 }
 .info h3 {
     color: white;
@@ -137,7 +140,7 @@ body {
     min-width: 40px;
     height: 40px;
     color: white;
-    background: lightblue;
+    background: darkgrey;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,7 +158,7 @@ body {
     font-size: 1.1em;
 }
 .sci {
-    margin-top: 40px;
+    margin-top: 20px;
     display: flex;
 }
 .sci li {
@@ -183,7 +186,7 @@ body {
 @media (max-width: 991px)
 {
     body {
-        background: lightslategray;
+        background: white;
     }
     .contactUs {
         padding: 20px;
@@ -213,4 +216,107 @@ body {
         min-height: 300px;
         padding: 0;
     }
+}
+
+.logo {
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url('img/menu.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position-x: center;
+    cursor: pointer;
+}
+
+.topBar header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px 100px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url('img/menu.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position-x: center;
+    cursor: pointer;
+}
+
+.toggle.active {
+    background: url('img/close.png');
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position-x: center;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu ul {
+    position: relative;
+    list-style: none;
+    background: white;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #111;
+}
+
+.menu ul li a:hover {
+    color: var(--overlay-color);
+}
+
+.showcase {
+    position:absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color: white;
+    z-index: 2;
+    transition: 0.5s;
+    background-image: url('../img/DJI_0097.JPG');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.showcase.active {
+    right: 300px;
+}
+
+.overlay {
+    position: absolute;
+    background: rgb(85, 85, 85);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: overlay;
 }

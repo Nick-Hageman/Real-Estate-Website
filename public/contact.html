@@ -8,6 +8,14 @@
     <title>Document</title>
 </head>
 <body>
+    <section class="showcase">
+    <div class="topBar">
+        <header>
+            <img class='logo' src="img/transparent-black-logo.png" alt="Hageman Homes Logo" width="250px" height="150px">
+            <div class="toggle"></div>
+        </header>
+    </div>
+    <div class="overlay"></div>
     <div class="contactUs">
         <div class="title">
             <h2>Contact</h2>
@@ -60,7 +68,7 @@
 
             <!--Info box-->
             <div class="contact info">
-                <h3>Contact Info</h3>
+                <h3><img src="img/pfp.png" alt="pfp" style="border-radius: 50%; height: 60px; width: 60px; vertical-align:middle;">   Tom Hageman</h3>
                 <div class="infoBox">
                     <div>
                         <span><ion-icon name="location"></ion-icon></span>
@@ -87,6 +95,23 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d23546.748010054485!2d-91.11732242989287!3d42.46298249999998!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87e3517eb98b7e41%3A0x54c2df2f74ffbf5a!2sCastle%20Hill%20Dr%20SE%2C%20Dyersville%2C%20IA%2052040!5e0!3m2!1sen!2sus!4v1658975227601!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
         </div>
     </div>
+    </section>
+    <div class="menu">
+        <ul>
+          <li><a href='index.html'>Home</a></li>
+          <li><a href='#'>Information</a></li>
+          <li><a href='contact.html'>Contact</a></li>
+        </ul>
+      </div>
+      <script>
+        const menuToggle = document.querySelector('.toggle')
+        const showcase = document.querySelector('.showcase')
+    
+        menuToggle.addEventListener('click', () => {
+          menuToggle.classList.toggle('active')
+          showcase.classList.toggle('active')
+        })
+      </script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
