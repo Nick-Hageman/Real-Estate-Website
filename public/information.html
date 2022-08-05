@@ -4,10 +4,103 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="information_style.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
     <title>Document</title>
 </head>
 <body>
+    <section class="showcase">
+    <div class="topBar">
+        <header>
+          <a href="index.html"><img class='logo' src="img/transparent-white-logo.png" alt="Hageman Homes Logo" width="250px" height="150px"></a>
+            <div class="toggle"></div>
+        </header>
+    </div>
+    <video src="img/DJI_0177.MP4" muted loop autoplay></video>
+    <div class="main">
+        <h1 style="color: white;">Available Lot Listings</h1>
+        <ul class="cards">
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="img/temp_house.jpeg"></div>
+              <div class="card_content">
+                <h2 class="card_title">Card Grid Layout</h2>
+                <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                <button class="btn card_btn">View Floorplans</button>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="img/temp_house.jpeg"></div>
+              <div class="card_content">
+                <h2 class="card_title">Card Grid Layout</h2>
+                <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                <button class="btn card_btn">View Floorplans</button>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="img/temp_house.jpeg"></div>
+              <div class="card_content">
+                <h2 class="card_title">Card Grid Layout</h2>
+                <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                <button class="btn card_btn">View Floorplans</button>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="img/temp_house.jpeg"></div>
+              <div class="card_content">
+                <h2 class="card_title">Card Grid Layout</h2>
+                <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                <button class="btn card_btn">View Floorplans</button>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="img/temp_house.jpeg"></div>
+              <div class="card_content">
+                <h2 class="card_title">Card Grid Layout</h2>
+                <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                <button class="btn card_btn">View Floorplans</button>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="img/temp_house.jpeg"></div>
+              <div class="card_content">
+                <h2 class="card_title">Card Grid Layout</h2>
+                <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                <button class="btn card_btn">View Floorplans</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!--<div class="overlay"></div>-->
+    </section>
+    <div class="menu">
+        <ul>
+          <li><a href='index.html'>Home</a></li>
+          <li><a href='information.html'>Information</a></li>
+          <li><a href='contact.html'>Contact</a></li>
+        </ul>
+      </div>
+      <script>
+        const menuToggle = document.querySelector('.toggle')
+        const showcase = document.querySelector('.showcase')
     
+        menuToggle.addEventListener('click', () => {
+          menuToggle.classList.toggle('active')
+          showcase.classList.toggle('active')
+        })
+      </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
