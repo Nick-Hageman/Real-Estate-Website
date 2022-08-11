@@ -4,9 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="portfolio_style.css">
+    <!--Bootsrapping scripts-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <title>Portfolio</title>
 </head>
 <body>
+    <section class="showcase">
+        <div class="topBar">
+            <header style="background: black;">
+                <a href="index.html"><img class='logo' src="img/transparent-black-logo.png" alt="Hageman Homes Logo" width="250px" height="150px"></a>
+                <div class="toggle"></div>
+            </header>
+        </div>
+        <div class="container-fluid">
+            <div class="row mt-4">
+                <div class="item col-sm-6 col-md-4 mb-3">
+                    <a href="img/temp_house.jpeg" class="fancybox" data-fancybox="gallery1">
+                        <img src="img/temp_house.jpeg" width="100%" height="100%">
+                    </a>
+                </div>
+                <div class="item col-sm-6 col-md-4 mb-3">
+                    <a href="img/black-logo.jpg" class="fancybox" data-fancybox="gallery1">
+                        <img src="img/black-logo.jpg" width="100%" height="100%">
+                    </a>
+                </div>
+                <div class="item col-sm-6 col-md-4 mb-3">
+                    <a href="img/white-logo.jpg" class="fancybox" data-fancybox="gallery1">
+                        <img src="img/white-logo.jpg" width="100%" height="100%">
+                    </a>
+                </div>
+                <div class="item col-sm-6 col-md-4 mb-3">
+                    <a href="img/black-logo.jpg" class="fancybox" data-fancybox="gallery1">
+                        <img src="img/black-logo.jpg" width="100%" height="100%">
+                    </a>
+                </div>
+                <div class="item col-sm-6 col-md-4 mb-3">
+                    <a href="img/white-logo.jpg" class="fancybox" data-fancybox="gallery1">
+                        <img src="img/white-logo.jpg" width="100%" height="100%">
+                    </a>
+                </div>
+                <div class="item col-sm-6 col-md-4 mb-3">
+                    <a href="img/temp_house.jpeg" class="fancybox" data-fancybox="gallery1">
+                        <img src="img/temp_house.jpeg" width="100%" height="100%">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="menu">
+        <ul>
+            <li><a href='index.html'>Home</a></li>
+            <li><a href='available-homes.html'>Available Homes</a></li>
+            <li><a href='information.html'>Information</a></li>
+            <li><a href='portfolio.html'>Portfolio</a></li>
+            <li><a href='contact.html'>Contact</a></li>
+        </ul>
+      </div>
+    <script>
+        const menuToggle = document.querySelector('.toggle')
+        const showcase = document.querySelector('.showcase')
     
+        menuToggle.addEventListener('click', () => {
+          menuToggle.classList.toggle('active')
+          showcase.classList.toggle('active')
+        })
+      </script>
 </body>
 </html>
