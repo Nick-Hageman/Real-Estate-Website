@@ -5,4 +5,4 @@
 • Implemented an interactive satellite map to display available properties to customers <br>
 • Managed and deployed the application using Docker in an AWS hosting environment <br>
 
-https://github.com/Nick-Hageman/Real-Estate-Website/assets/91749467/7c7e7b5b-1436-473f-b798-9a1a047ae06e
+https://github.com/Nick-Hageman/Real-Estate-Website/assets/91749467/fea5f8b2-dd21-42eb-9a0b-ab07b929d673
